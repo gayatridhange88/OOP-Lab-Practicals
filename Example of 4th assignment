@@ -1,0 +1,57 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+class student
+{
+private:
+    string Name;
+    int RollNo;
+    long long MobileNo;
+    string EmailId;
+
+public:
+    student()
+    {
+        Name = "Gayatri Dhange";
+        RollNo = 51;
+        MobileNo = 4356758859;
+        EmailId = "gayatri23@gmail.com";
+    }
+
+    student(string N, int RN, long long MN, string EI)
+    {
+        Name = N;
+        RollNo = RN;
+        MobileNo = MN;
+        EmailId = EI;
+    }
+
+    void display()
+    {
+        cout << "Name: " << Name << endl;
+        cout << "Roll No: " << RollNo << endl;
+        cout << "EmailId: " << EmailId << endl;
+        cout << "-----------------------" << endl;
+    }
+};
+
+int main()
+{
+    student student1;
+
+    student student2(
+        "gautami dhange",
+        7,
+        456718874658,
+        "gautami11@gmail.com"
+    );
+
+    cout << "First student details:" << endl;
+    student1.display();
+
+    cout << "Second student details:" << endl;
+    student2.display();
+
+    return 0;
+}
